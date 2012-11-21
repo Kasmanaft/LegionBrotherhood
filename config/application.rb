@@ -1,10 +1,10 @@
 require File.expand_path('../boot', __FILE__)
 
-#require 'rails/all'
-require "active_record/railtie"
-require "action_controller/railtie"
+require 'rails/all'
+#require "active_record/railtie"
+#require "action_controller/railtie"
 #require "action_mailer/railtie"
-require "sprockets/railtie"
+#require "sprockets/railtie"
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -62,5 +62,7 @@ module LegionBrotherhood
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.assets.initialize_on_precompile = false
   end
 end
