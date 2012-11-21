@@ -25,6 +25,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem "thin"
 
 group :development do
   gem "haml-rails"
@@ -32,7 +33,6 @@ group :development do
   gem "ruby_parser"
   gem "factory_girl_rails"
   gem "rspec-rails"
-  gem "thin"
 end
 
 group :test do
@@ -45,7 +45,4 @@ group :test do
   gem "rspec-rails"
 end
 
-gem "unicorn", :group => :production
-
 gem "quiet_assets", :group => :development
-
