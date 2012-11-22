@@ -4,7 +4,7 @@ development:
   api_key: '847774174391622'
   api_secret: BLa1WLZa40AkOUWegVMsB2dTPys
   enhance_image_tag: true
-  static_image_support: true
+  static_image_support: false
 production:
   cloud_name: hyjk9epe5
   api_key: '847774174391622'
