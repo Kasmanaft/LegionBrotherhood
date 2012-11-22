@@ -1,0 +1,15 @@
+!!! 5
+%html{:lang => "en", :spellcheck=>'true'}
+  %head
+    %title Legion Brotherhood
+    %meta{:name=>"keywords", :content=>yield(:keywords)}
+    %meta{:name=>"description", :content=>yield(:description)}
+  
+    %meta{:'http-equiv'=>"Content-Type", :content=>"text/html; charset=utf-8"}
+  
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+  %body
+    =yield

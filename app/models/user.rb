@@ -1,11 +1,12 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :confirmable,
-  # :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+  attr_accessible :email, :name, :nickname, :photo_cache, :photo, :vehicle, :vehicle_photo_cache, :vehicle_photo,
+  					:role, :birthday, :passport, :passport_authority, :city, :address, :driver_license, 
+  					:phone_mobile, :phone_home, :spouse, :spouse_phone, :father, :father_phone, :mother,
+  					:mother_phone, :occupation, :skype, :icq, :another_contacts, :vehicle_license, :vehicle_plate,
+  					:vehicle_vin, :vehicle_year, :comments, :remove_photo, :remove_vehicle_photo 
 
-  # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
-  # attr_accessible :title, :body
+  ROLES = ['Support', 'Member', 'Prospect', 'Officer', 'Vice President', 'President']
+
+  mount_uploader :photo, PictureUploader
+  mount_uploader :vehicle_photo, PictureUploader
 end

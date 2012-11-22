@@ -1,0 +1,42 @@
+=semantic_form_for [:admin, @user] do |f|
+  =f.semantic_errors
+  =f.inputs "Personal Info" do
+    =f.input :name
+    =f.input :nickname
+    =f.input :role, :as=>:select, :collection=>User::ROLES
+    =f.input :photo_cache, :as=>:hidden, :input_html=>{:value=>f.object.photo}
+    =f.input :photo, :as=>:file, :hint=>photo_preview(f.object.photo, f)
+    =f.input :remove_photo, :as=>:boolean
+    =f.input :birthday, :start_year=> Time.now.year - 65, :end_year=> Time.now.year - 15
+    =f.input :occupation
+    =f.input :city
+    =f.input :address
+  =f.inputs 'Documents' do
+    =f.input :passport
+    =f.input :passport_authority
+    =f.input :driver_license
+  =f.inputs 'Contacts' do
+    =f.input :phone_mobile
+    =f.input :phone_home
+    =f.input :email
+    =f.input :skype
+    =f.input :icq
+    =f.input :another_contacts, :input_html=>{:rows=>3}
+  =f.inputs 'Relatives' do
+    =f.input :spouse
+    =f.input :spouse_phone
+    =f.input :father
+    =f.input :father_phone
+    =f.input :mother
+    =f.input :mother_phone
+  =f.inputs 'Vehicle' do
+    =f.input :vehicle
+    =f.input :vehicle_year, :as=>:select, :collection=>(Time.now.year - 35 .. Time.now.year).to_a.reverse
+    =f.input :vehicle_photo_cache, :as=>:hidden, :input_html=>{:value=>f.object.vehicle_photo}
+    =f.input :vehicle_photo, :as=>:file, :hint=>photo_preview(f.object.vehicle_photo, f)
+    =f.input :remove_vehicle_photo, :as=>:boolean
+    =f.input :vehicle_plate
+    =f.input :vehicle_license
+    =f.input :vehicle_vin
+  =f.actions
+
