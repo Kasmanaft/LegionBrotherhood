@@ -23,13 +23,15 @@ ActiveAdmin.register User do
 
   index :as => :grid, :columns => 4 do |user|
     div do
-      link_to(cl_image_tag(user.photo.identifier, :width => 200, :height => 200, :crop => :crop, :gravity => :face), admin_user_path(user))
+      link_to(photo_preview(user.photo, :face=>true), admin_user_path(user))
     end
     a truncate(user.nickname), :href => admin_user_path(user)
   end
 
   form :partial => "form"
 
-  show :title => :nickname
+  show :title => :nickname do
+    render "show"
+  end
 
 end

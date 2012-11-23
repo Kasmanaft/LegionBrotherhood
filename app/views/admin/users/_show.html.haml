@@ -1,0 +1,90 @@
+.personal.show_block
+  .label Personal Info
+  .show_block_wrapper
+    .photo
+      =photo_preview @user.photo, :face=>true
+    %table
+      %tr
+        %td Name
+        %td.light=@user.name
+        %td Nickname
+        %td.light=@user.nickname
+      %tr
+        %td Role
+        %td.light=@user.role
+        %td Birthday
+        %td.light=@user.birthday
+      %tr
+        %td Driver License
+        %td.light=@user.driver_license
+        %td Occupation
+        %td.light=@user.occupation
+      %tr
+        %td City
+        %td.light=@user.city
+        %td Address
+        %td.light=@user.address
+      %tr
+        %td Passport
+        %td.light=@user.passport
+        %td Passport Authority
+        %td.light=@user.passport_authority
+
+
+.conracts.show_block
+  .label Contacts
+  .show_block_wrapper
+    %table.wider
+      %tr
+        %td Mobile Phone
+        %td.light.w=@user.phone_mobile
+        %td Home Phone
+        %td.light.w=@user.phone_home
+      %tr
+        %td Skype
+        %td.light.w=@user.skype
+        %td ICQ
+        %td.light.w=@user.icq
+      %tr
+        %td Email
+        %td.light.ew{:colspan=>3}=@user.email
+      %tr
+        %td Another Contacts
+        %td.light.ew{:colspan=>3}=@user.another_contacts
+
+    %table.wider
+      %tr
+        %td Spouse
+        %td.light=@user.spouse
+        %td Phone
+        %td.light=@user.spouse_phone
+      %tr
+        %td Father
+        %td.light=@user.father
+        %td Phone
+        %td.light=@user.father_phone
+      %tr
+        %td Mother
+        %td.light=@user.mother
+        %td Phone
+        %td.light=@user.mother_phone
+
+.vehicle.show_block
+  .label Vehicle
+  .show_block_wrapper
+    .photo
+      =photo_preview @user.vehicle_photo
+    %table
+      %tr
+        %td Vehicle
+        %td.light=@user.vehicle
+        %td Plate
+        %td.light=@user.vehicle_plate
+      %tr
+        %td Year
+        %td.light=@user.vehicle_year
+        %td License
+        %td.light=@user.vehicle_license
+      %tr
+        %td VIN
+        %td.light=@user.vehicle_vin

@@ -1,9 +1,15 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :name, :nickname, :photo_cache, :photo, :vehicle, :vehicle_photo_cache, :vehicle_photo,
-  					:role, :birthday, :passport, :passport_authority, :city, :address, :driver_license, 
-  					:phone_mobile, :phone_home, :spouse, :spouse_phone, :father, :father_phone, :mother,
-  					:mother_phone, :occupation, :skype, :icq, :another_contacts, :vehicle_license, :vehicle_plate,
-  					:vehicle_vin, :vehicle_year, :comments, :remove_photo, :remove_vehicle_photo 
+  attr_accessible :name, :nickname, :role, :birthday, :passport, :passport_authority, :city, :address, 
+            :photo, :driver_license, :occupation, 
+
+            :email, :phone_mobile, :phone_home, :skype, :icq, :another_contacts, 
+
+            :spouse, :spouse_phone, :father, :father_phone, :mother, :mother_phone,
+
+            :vehicle, :vehicle_photo, :vehicle_license, :vehicle_plate,
+  					:vehicle_vin, :vehicle_year,
+            
+            :remove_photo, :remove_vehicle_photo, :photo_cache, :vehicle_photo_cache 
 
   ROLES = ['Support', 'Member', 'Prospect', 'Officer', 'Vice President', 'President']
 
