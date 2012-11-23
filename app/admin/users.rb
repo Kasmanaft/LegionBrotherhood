@@ -32,6 +32,7 @@ ActiveAdmin.register User do
 
   show :title => :nickname do
     render "show"
+    active_admin_comments
   end
 
 end
