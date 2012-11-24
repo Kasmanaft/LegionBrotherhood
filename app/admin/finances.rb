@@ -11,10 +11,10 @@ ActiveAdmin.register Finance do
   #config.sort_order = "name_asc"
 
   scope :all, :default => true
-  scope :debit do |finances|
+  scope 'Сдано' do |finances|
     finances.where "amount>0"
   end
-  scope :credit do |finances|
+  scope 'Выдано' do |finances|
     finances.where "amount<0"
   end
 
