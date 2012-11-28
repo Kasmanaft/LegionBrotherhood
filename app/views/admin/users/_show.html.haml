@@ -1,44 +1,44 @@
 .personal.show_block
-  .label Personal Info
+  .label Персональная информация
   .show_block_wrapper
     .photo
       =photo_preview @user.photo, :face=>true
     %table
       %tr
-        %td Name
+        %td ФИО
         %td.light=@user.name
-        %td Nickname
+        %td Прозвище
         %td.light=@user.nickname
       %tr
-        %td Role
+        %td Роль
         %td.light=@user.role
-        %td Birthday
+        %td День рождения
         %td.light=@user.birthday
       %tr
-        %td Driver License
+        %td Водительское удостоверение
         %td.light=@user.driver_license
-        %td Occupation
+        %td Професия
         %td.light=@user.occupation
       %tr
-        %td City
+        %td Город
         %td.light=@user.city
-        %td Address
+        %td Адрес
         %td.light=@user.address
       %tr
-        %td Passport
+        %td Паспорт
         %td.light=@user.passport
-        %td Passport Authority
+        %td Выдан
         %td.light=@user.passport_authority
 
 
 .conracts.show_block
-  .label Contacts
+  .label Контакты
   .show_block_wrapper
     %table.wider
       %tr
-        %td Mobile Phone
+        %td Мобильный телефон
         %td.light.w=@user.phone_mobile
-        %td Home Phone
+        %td Домашний телефон
         %td.light.w=@user.phone_home
       %tr
         %td Skype
@@ -49,41 +49,41 @@
         %td Email
         %td.light.ew{:colspan=>3}=@user.email
       %tr
-        %td Another Contacts
+        %td Другие контакты
         %td.light.ew{:colspan=>3}=@user.another_contacts
 
     %table.wider
       %tr
-        %td Spouse
+        %td Супруг(а)
         %td.light=@user.spouse
-        %td Phone
+        %td Телефон
         %td.light=@user.spouse_phone
       %tr
-        %td Father
+        %td Отец
         %td.light=@user.father
-        %td Phone
+        %td Телефон
         %td.light=@user.father_phone
       %tr
-        %td Mother
+        %td Мать
         %td.light=@user.mother
-        %td Phone
+        %td Телефон
         %td.light=@user.mother_phone
 
 .vehicle.show_block
-  .label Vehicle
+  .label Мотоцикл
   .show_block_wrapper
     .photo
       =photo_preview @user.vehicle_photo
     %table
       %tr
-        %td Vehicle
+        %td Мотоцикл
         %td.light=@user.vehicle
-        %td Plate
+        %td Номерной знак
         %td.light=@user.vehicle_plate
       %tr
-        %td Year
+        %td Год выпуска
         %td.light=@user.vehicle_year
-        %td License
+        %td Тех. паспорт
         %td.light=@user.vehicle_license
       %tr
         %td VIN

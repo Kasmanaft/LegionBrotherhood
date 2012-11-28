@@ -1,0 +1,12 @@
+%p
+  %b Всего сдано:
+  &nbsp;
+  %span.green=number_to_currency Finance.sdano
+%p
+  %b Всего выдано: 
+  &nbsp;
+  %span.red=number_to_currency Finance.vidano
+%p
+  %b Касса: 
+  &nbsp;
+  %span.blue=number_to_currency(Finance.sdano - Finance.vidano)

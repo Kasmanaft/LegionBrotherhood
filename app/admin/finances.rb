@@ -19,20 +19,18 @@ ActiveAdmin.register Finance do
   end
 
   index do
-    column "User" do |finance|
+    column "Пользователь" do |finance|
       link_to finance.user.name, admin_user_path(finance.user)
     end
-    column :amount
+    column :amount do |finance|
+      raw "<span class='#{finance.amount>0 ? :green : :red}'>#{number_to_currency(finance.amount)}</span>"
+    end  
     column :created_at
     column :details, :sortable => false
     default_actions
   end
 
-  sidebar :finances do
-    para "Всего сдано: #{Finance.sdano}"
-    para "Всего выдано: #{Finance.vidano}"
-    para "Касса: #{Finance.sdano - Finance.vidano}"
-  end
+  sidebar 'Касса', :partial => "sidebar"
 
   #form
 

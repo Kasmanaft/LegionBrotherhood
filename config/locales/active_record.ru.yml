@@ -1,0 +1,81 @@
+ru:
+  # Attributes names common to most models
+  attributes:
+    created_at: "Создано"
+    updated_at: "Изменено"
+
+  # Default error messages
+  errors:
+    messages:
+      taken: "уже занято"
+
+  # Active Record models configuration
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "Валидация не прошла: %{errors}"
+        restrict_dependent_destroy:
+          one: "Невозможно удалить запись, связанная запись %{record} существует"
+          many: "Невозможно удалить запись, связанные записи %{record} существует"
+        # Append your own errors here or at the model/attributes scope.
+
+      # You can define own errors for models or model attributes.
+      # The values :model, :attribute and :value are always available for interpolation.
+      #
+      # For example,
+      #   models:
+      #     user:
+      #       blank: "This is a custom blank message for %{model}: %{attribute}"
+      #       attributes:
+      #         login:
+      #           blank: "This is a custom blank message for User login"
+      # Will define custom blank validation message for User model and
+      # custom blank validation message for login attribute of User model.
+      #models:
+    models:
+      user: 'Пользователи'
+      finance: 'Финансы'
+    # Translate model names. Used in Model.human_name().
+    #models:
+      # For example,
+      #   user: "Dude"
+      # will translate User model name to "Dude"
+    attributes:
+      user:
+        name: 'ФИО'
+        nickname: 'Прозвище'
+        role: 'Роль'
+        birthday: 'День рождения'
+        passport: 'Паспорт'
+        passport_authority: 'Паспорт выдан'
+        city: 'Город'
+        address: 'Адрес'
+        driver_license: 'Водительское удостоверение'
+        phone_mobile: 'Мобильный телефон'
+        phone_home: 'Домашний телефон'
+        spouse: 'Супруг(а)'
+        spouse_phone: 'Телефон супруг(а/и)'
+        father: 'Отец'
+        father_phone: 'Телефон отца'
+        mother: 'Мать'
+        mother_phone: 'Телефон матери'
+        photo: 'Фото'
+        occupation: 'Профессия'
+        another_contacts: 'Другие контакты'
+        vehicle_license: 'Тех. паспорт'
+        vehicle: 'Мотоцикл'
+        vehicle_plate: 'Номерной знак'
+        vehicle_photo: 'Фото мотоцикла'
+        vehicle_vin: 'VIN'
+        vehicle_year: 'Год выпуска'
+      finance:
+        user: 'Пользователь'
+        amount: 'Сумма'
+        details: 'Детали'
+
+    # Translate model attribute names. Used in Model.human_attribute_name(attribute).
+    #attributes:
+      # For example,
+      #   user:
+      #     login: "Handle"
+      # will translate User attribute "login" as "Handle"

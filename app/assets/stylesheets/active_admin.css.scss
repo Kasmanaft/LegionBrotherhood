@@ -28,4 +28,8 @@
 // .admin_namespace    applies to the admin namespace (eg: /admin)
 // .other_namespace    applies to a custom namespace named other (eg: /other)
 
-@import 'user_show'
+@import 'user_show';
+
+.red{color:red;}
+.green{color:green;}
+.blue{color:blue;}
